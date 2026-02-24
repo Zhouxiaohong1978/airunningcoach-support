@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI跑步教练 - 技术支持</title>
+  <title>AI Running Coach - Support</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; background: #f5f5f7; color: #1d1d1f; }
     header { background: #2e7d32; color: white; padding: 48px 24px 32px; text-align: center; }
     header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
     header p { font-size: 16px; opacity: 0.85; }
+    .lang-bar { text-align: center; padding: 12px; background: #fff; border-bottom: 1px solid #eee; }
+    .lang-bar button { margin: 0 6px; padding: 6px 18px; border-radius: 20px; border: 1px solid #2e7d32; background: white; color: #2e7d32; font-size: 14px; cursor: pointer; }
+    .lang-bar button.active { background: #2e7d32; color: white; }
     main { max-width: 720px; margin: 32px auto; padding: 0 20px 60px; }
     .card { background: white; border-radius: 16px; padding: 28px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
     .card h2 { font-size: 19px; color: #2e7d32; margin-bottom: 18px; }
@@ -20,63 +23,118 @@
     .contact-box p { color: #555; font-size: 15px; margin-bottom: 10px; }
     .contact-box a { display: inline-block; background: #2e7d32; color: white; text-decoration: none; padding: 12px 28px; border-radius: 24px; font-size: 15px; font-weight: 600; }
     footer { text-align: center; color: #999; font-size: 13px; padding-bottom: 40px; }
+    .lang-cn, .lang-en { display: none; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>🏃 AI跑步教练</h1>
-  <p>技术支持</p>
+  <h1>🏃 AI Running Coach</h1>
+  <p class="lang-cn">技术支持</p>
+  <p class="lang-en">Support</p>
 </header>
+
+<div class="lang-bar">
+  <button id="btn-cn" onclick="setLang('cn')">中文</button>
+  <button id="btn-en" onclick="setLang('en')">English</button>
+</div>
 
 <main>
 
-  <div class="card">
-    <h2>常见问题</h2>
-
-    <div class="faq-item">
-      <h3>GPS 定位不准 / 距离不更新</h3>
-      <p>请确保已授权「使用期间允许」定位权限。室内测试时 GPS 精度较低，建议在室外空旷地带使用。</p>
+  <!-- Chinese -->
+  <div class="lang-cn">
+    <div class="card">
+      <h2>常见问题</h2>
+      <div class="faq-item">
+        <h3>GPS 定位不准 / 距离不更新</h3>
+        <p>请确保已授权「使用期间允许」定位权限。室内测试时 GPS 精度较低，建议在室外空旷地带使用。</p>
+      </div>
+      <div class="faq-item">
+        <h3>语音播报没有声音</h3>
+        <p>请检查手机侧边静音开关是否关闭，并调高系统音量。使用蓝牙耳机时请确认已连接。</p>
+      </div>
+      <div class="faq-item">
+        <h3>训练计划生成失败</h3>
+        <p>训练计划由 AI 生成，需要网络连接。请检查网络后重试。免费用户每月可生成 1 次，Pro 用户无限制。</p>
+      </div>
+      <div class="faq-item">
+        <h3>如何取消订阅</h3>
+        <p>前往 iPhone「设置」→「你的姓名」→「订阅」→ 找到「AI跑步教练」→「取消订阅」。</p>
+      </div>
+      <div class="faq-item">
+        <h3>购买后无法解锁 Pro 功能</h3>
+        <p>请在 App 内「我的」页面点击「恢复购买」按钮，即可恢复已购买的 Pro 权益。</p>
+      </div>
+      <div class="faq-item">
+        <h3>成就和跑步记录丢失</h3>
+        <p>数据存储在本地设备，请勿卸载 App。若已丢失，请联系我们说明情况，我们将尽力协助恢复。</p>
+      </div>
     </div>
-
-    <div class="faq-item">
-      <h3>语音播报没有声音</h3>
-      <p>请检查手机侧边静音开关是否关闭，并调高系统音量。使用蓝牙耳机时请确认已连接。</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>训练计划生成失败</h3>
-      <p>训练计划由 AI 生成，需要网络连接。请检查网络后重试。免费用户每月可生成 1 次，Pro 用户无限制。</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>如何取消订阅</h3>
-      <p>前往 iPhone「设置」→「你的姓名」→「订阅」→ 找到「AI跑步教练」→「取消订阅」。</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>购买后无法解锁 Pro 功能</h3>
-      <p>请在 App 内「我的」页面点击「恢复购买」按钮，即可恢复已购买的 Pro 权益。</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>成就和跑步记录丢失</h3>
-      <p>数据存储在本地设备，请勿卸载 App。若已丢失，请联系我们说明情况，我们将尽力协助恢复。</p>
+    <div class="card">
+      <h2>联系我们</h2>
+      <div class="contact-box">
+        <p>如以上内容未能解决你的问题，欢迎发送邮件，我们将在 1-2 个工作日内回复。</p>
+        <p style="font-size:16px;font-weight:600;color:#2e7d32;margin-bottom:12px;word-break:break-all;">1614103587@qq.com</p>
+        <a href="mailto:1614103587@qq.com">发送邮件</a>
+      </div>
     </div>
   </div>
 
-  <div class="card">
-    <h2>联系我们</h2>
-    <div class="contact-box">
-      <p>如以上内容未能解决你的问题，欢迎发送邮件，我们将在 1-2 个工作日内回复。</p>
-      <p style="font-size:16px;font-weight:600;color:#2e7d32;margin-bottom:12px;word-break:break-all;">1614103587@qq.com</p>
-      <a href="mailto:1614103587@qq.com">发送邮件</a>
+  <!-- English -->
+  <div class="lang-en">
+    <div class="card">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <h3>GPS inaccurate / Distance not updating</h3>
+        <p>Make sure location permission is set to "While Using the App". GPS accuracy is low indoors — use the app in an open outdoor area for best results.</p>
+      </div>
+      <div class="faq-item">
+        <h3>No voice announcements</h3>
+        <p>Check that the side silent switch is off and the system volume is turned up. If using Bluetooth headphones, confirm they are connected.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Training plan generation failed</h3>
+        <p>Training plans are AI-generated and require an internet connection. Check your network and try again. Free users can generate 1 plan per month; Pro users have unlimited plans.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How to cancel subscription</h3>
+        <p>Go to iPhone Settings → Your Name → Subscriptions → find "AI Running Coach" → Cancel Subscription.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Pro features not unlocked after purchase</h3>
+        <p>Tap "Restore Purchase" on the Profile page inside the App to restore your Pro benefits.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Achievements or run records missing</h3>
+        <p>Data is stored on your local device — do not uninstall the App. If data is lost, contact us and we will do our best to help.</p>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Contact Us</h2>
+      <div class="contact-box">
+        <p>If the above didn't resolve your issue, feel free to email us. We respond within 1–2 business days.</p>
+        <p style="font-size:16px;font-weight:600;color:#2e7d32;margin-bottom:12px;word-break:break-all;">1614103587@qq.com</p>
+        <a href="mailto:1614103587@qq.com">Send Email</a>
+      </div>
     </div>
   </div>
 
 </main>
 
-<footer>© 2026 Xiaohong Zhou · AI跑步教练</footer>
+<footer>© 2026 Xiaohong Zhou · AI Running Coach</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-cn, .lang-en').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('header p').forEach(el => el.style.display = 'none');
+    document.getElementById('btn-cn').classList.remove('active');
+    document.getElementById('btn-en').classList.remove('active');
+    document.querySelectorAll('.lang-' + lang).forEach(el => el.style.display = 'block');
+    document.getElementById('btn-' + lang).classList.add('active');
+  }
+  const userLang = navigator.language || navigator.userLanguage;
+  setLang(userLang.startsWith('zh') ? 'cn' : 'en');
+</script>
 
 </body>
 </html>

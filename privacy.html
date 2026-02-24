@@ -3,13 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI跑步教练 - 隐私政策</title>
+  <title>AI Running Coach - Privacy Policy</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; background: #f5f5f7; color: #1d1d1f; }
     header { background: #2e7d32; color: white; padding: 48px 24px 32px; text-align: center; }
     header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
     header p { font-size: 16px; opacity: 0.85; }
+    .lang-bar { text-align: center; padding: 12px; background: #fff; border-bottom: 1px solid #eee; }
+    .lang-bar button { margin: 0 6px; padding: 6px 18px; border-radius: 20px; border: 1px solid #2e7d32; background: white; color: #2e7d32; font-size: 14px; cursor: pointer; }
+    .lang-bar button.active { background: #2e7d32; color: white; }
     main { max-width: 720px; margin: 32px auto; padding: 0 20px 60px; }
     .card { background: white; border-radius: 16px; padding: 28px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
     .card h2 { font-size: 19px; color: #2e7d32; margin-bottom: 16px; }
@@ -22,82 +25,157 @@
     .contact-box p { margin-bottom: 10px; }
     .contact-box a { display: inline-block; background: #2e7d32; color: white; text-decoration: none; padding: 12px 28px; border-radius: 24px; font-size: 15px; font-weight: 600; }
     footer { text-align: center; color: #999; font-size: 13px; padding-bottom: 40px; }
+    .lang-cn, .lang-en { display: none; }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>🏃 AI跑步教练</h1>
-  <p>隐私政策</p>
+  <h1>🏃 AI Running Coach</h1>
+  <p class="lang-cn">隐私政策</p>
+  <p class="lang-en">Privacy Policy</p>
 </header>
+
+<div class="lang-bar">
+  <button id="btn-cn" onclick="setLang('cn')">中文</button>
+  <button id="btn-en" onclick="setLang('en')">English</button>
+</div>
 
 <main>
 
-  <div class="card">
-    <span class="date-tag">最后更新：2026年2月</span>
-    <p>本隐私政策说明「AI跑步教练」（以下简称"本App"）如何收集、使用和保护您的个人信息。使用本App即表示您同意本政策。</p>
+  <!-- Chinese -->
+  <div class="lang-cn">
+    <div class="card">
+      <span class="date-tag">最后更新：2026年2月</span>
+      <p>本隐私政策说明「AI跑步教练」（以下简称"本App"）如何收集、使用和保护您的个人信息。使用本App即表示您同意本政策。</p>
+    </div>
+    <div class="card">
+      <h2>1. 我们收集哪些信息</h2>
+      <ul>
+        <li><strong>位置信息：</strong>跑步过程中使用 GPS 记录轨迹和距离，仅在跑步时读取，不在后台持续获取。</li>
+        <li><strong>运动数据：</strong>跑步距离、配速、卡路里等数据，存储在本地设备。</li>
+        <li><strong>账户信息：</strong>注册时提供的邮箱地址，用于登录和账户找回。</li>
+        <li><strong>使用数据：</strong>训练计划生成次数等使用统计，用于免费配额管理。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>2. 如何使用这些信息</h2>
+      <ul>
+        <li>提供跑步追踪和训练计划功能</li>
+        <li>生成 AI 个性化训练建议</li>
+        <li>管理订阅状态和免费使用配额</li>
+        <li>改善 App 功能和用户体验</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>3. 信息共享</h2>
+      <p>我们不会出售或出租您的个人信息。仅在以下情况下与第三方共享：</p>
+      <ul>
+        <li><strong>RevenueCat：</strong>处理订阅购买，仅共享匿名用户 ID。</li>
+        <li><strong>阿里云百炼：</strong>生成 AI 训练计划，仅发送训练目标和历史数据，不含身份信息。</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>4. 数据存储与安全</h2>
+      <p>您的跑步数据主要存储在本地设备。账户信息通过加密传输并安全存储，我们采取合理措施防止未经授权的访问。</p>
+    </div>
+    <div class="card">
+      <h2>5. 您的权利</h2>
+      <ul>
+        <li>随时在 App 设置中删除账户及所有相关数据</li>
+        <li>关闭位置权限（将影响跑步追踪功能）</li>
+        <li>通过邮件联系我们请求查阅或删除数据</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>6. 儿童隐私</h2>
+      <p>本App不面向13岁以下儿童，我们不会有意收集儿童的个人信息。</p>
+    </div>
+    <div class="card">
+      <h2>7. 联系我们</h2>
+      <div class="contact-box">
+        <p>如对本隐私政策有任何疑问，欢迎通过邮件联系我们。</p>
+        <p style="font-size:16px;font-weight:600;color:#2e7d32;margin-bottom:12px;word-break:break-all;">1614103587@qq.com</p>
+        <a href="mailto:1614103587@qq.com">发送邮件</a>
+      </div>
+    </div>
   </div>
 
-  <div class="card">
-    <h2>1. 我们收集哪些信息</h2>
-    <ul>
-      <li><strong>位置信息：</strong>跑步过程中使用 GPS 记录轨迹和距离，仅在跑步时读取，不在后台持续获取。</li>
-      <li><strong>运动数据：</strong>跑步距离、配速、卡路里等数据，存储在本地设备。</li>
-      <li><strong>账户信息：</strong>注册时提供的邮箱地址，用于登录和账户找回。</li>
-      <li><strong>使用数据：</strong>训练计划生成次数等使用统计，用于免费配额管理。</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>2. 如何使用这些信息</h2>
-    <ul>
-      <li>提供跑步追踪和训练计划功能</li>
-      <li>生成 AI 个性化训练建议</li>
-      <li>管理订阅状态和免费使用配额</li>
-      <li>改善 App 功能和用户体验</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>3. 信息共享</h2>
-    <p>我们不会出售或出租您的个人信息。仅在以下情况下与第三方共享：</p>
-    <ul>
-      <li><strong>RevenueCat：</strong>处理订阅购买，仅共享匿名用户 ID。</li>
-      <li><strong>阿里云百炼：</strong>生成 AI 训练计划，仅发送训练目标和历史数据，不含身份信息。</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>4. 数据存储与安全</h2>
-    <p>您的跑步数据主要存储在本地设备。账户信息通过加密传输并安全存储，我们采取合理措施防止未经授权的访问。</p>
-  </div>
-
-  <div class="card">
-    <h2>5. 您的权利</h2>
-    <ul>
-      <li>随时在 App 设置中删除账户及所有相关数据</li>
-      <li>关闭位置权限（将影响跑步追踪功能）</li>
-      <li>通过邮件联系我们请求查阅或删除数据</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>6. 儿童隐私</h2>
-    <p>本App不面向13岁以下儿童，我们不会有意收集儿童的个人信息。</p>
-  </div>
-
-  <div class="card">
-    <h2>7. 联系我们</h2>
-    <div class="contact-box">
-      <p>如对本隐私政策有任何疑问，欢迎通过邮件联系我们。</p>
-      <p style="font-size:16px;font-weight:600;color:#2e7d32;margin-bottom:12px;word-break:break-all;">1614103587@qq.com</p>
-      <a href="mailto:1614103587@qq.com">发送邮件</a>
+  <!-- English -->
+  <div class="lang-en">
+    <div class="card">
+      <span class="date-tag">Last Updated: February 2026</span>
+      <p>This Privacy Policy explains how AI Running Coach ("the App") collects, uses, and protects your personal information. By using the App, you agree to this policy.</p>
+    </div>
+    <div class="card">
+      <h2>1. Information We Collect</h2>
+      <ul>
+        <li><strong>Location Data:</strong> GPS is used to record your route and distance during runs. It is only accessed while running and never tracked in the background.</li>
+        <li><strong>Activity Data:</strong> Run distance, pace, calories, and other metrics stored locally on your device.</li>
+        <li><strong>Account Info:</strong> Email address provided at registration, used for login and account recovery.</li>
+        <li><strong>Usage Data:</strong> Training plan generation counts and other usage statistics for free quota management.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>2. How We Use Your Information</h2>
+      <ul>
+        <li>Provide run tracking and training plan features</li>
+        <li>Generate personalized AI training advice</li>
+        <li>Manage subscription status and free usage quotas</li>
+        <li>Improve App features and user experience</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>3. Information Sharing</h2>
+      <p>We do not sell or rent your personal information. We only share data with third parties in the following cases:</p>
+      <ul>
+        <li><strong>RevenueCat:</strong> Processes subscription purchases using only an anonymous user ID.</li>
+        <li><strong>Alibaba Cloud:</strong> Generates AI training plans using only training goals and history — no identity information is shared.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>4. Data Storage & Security</h2>
+      <p>Your run data is stored primarily on your local device. Account information is transmitted with encryption and stored securely. We take reasonable measures to prevent unauthorized access.</p>
+    </div>
+    <div class="card">
+      <h2>5. Your Rights</h2>
+      <ul>
+        <li>Delete your account and all associated data at any time in App Settings</li>
+        <li>Revoke location permission (this will affect run tracking functionality)</li>
+        <li>Contact us by email to request access to or deletion of your data</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>6. Children's Privacy</h2>
+      <p>The App is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+    </div>
+    <div class="card">
+      <h2>7. Contact Us</h2>
+      <div class="contact-box">
+        <p>If you have any questions about this Privacy Policy, please contact us by email.</p>
+        <p style="font-size:16px;font-weight:600;color:#2e7d32;margin-bottom:12px;word-break:break-all;">1614103587@qq.com</p>
+        <a href="mailto:1614103587@qq.com">Send Email</a>
+      </div>
     </div>
   </div>
 
 </main>
 
-<footer>© 2026 Xiaohong Zhou · AI跑步教练</footer>
+<footer>© 2026 Xiaohong Zhou · AI Running Coach</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-cn, .lang-en').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('header p').forEach(el => el.style.display = 'none');
+    document.getElementById('btn-cn').classList.remove('active');
+    document.getElementById('btn-en').classList.remove('active');
+    document.querySelectorAll('.lang-' + lang).forEach(el => el.style.display = 'block');
+    document.getElementById('btn-' + lang).classList.add('active');
+  }
+  // Auto-detect browser language
+  const userLang = navigator.language || navigator.userLanguage;
+  setLang(userLang.startsWith('zh') ? 'cn' : 'en');
+</script>
 
 </body>
 </html>
