@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,19 +10,26 @@
     body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; background: #f5f5f7; color: #1d1d1f; }
     header { background: #2e7d32; color: white; padding: 40px 24px 28px; text-align: center; }
     header h1 { font-size: 26px; font-weight: 700; margin-bottom: 6px; }
-    header p { font-size: 15px; opacity: 0.85; }
-    .lang-divider { background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 10px 20px; margin: 24px 0 16px; font-size: 15px; font-weight: 700; color: #2e7d32; }
-    main { max-width: 720px; margin: 24px auto; padding: 0 20px 60px; }
-    .card { background: white; border-radius: 16px; padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
-    .card h2 { font-size: 17px; color: #2e7d32; margin-bottom: 18px; }
-    .faq-item { margin-bottom: 18px; }
-    .faq-item h3 { font-size: 15px; font-weight: 600; margin-bottom: 5px; color: #1d1d1f; }
-    .faq-item p { font-size: 14px; color: #555; line-height: 1.6; }
-    .contact-box { background: #e8f5e9; border-radius: 12px; padding: 18px; text-align: center; margin-top: 8px; }
-    .contact-box p { color: #555; font-size: 14px; margin-bottom: 8px; }
-    .contact-box .email { font-size: 15px; font-weight: 600; color: #2e7d32; margin-bottom: 12px; word-break: break-all; }
-    .contact-box a { display: inline-block; background: #2e7d32; color: white; text-decoration: none; padding: 10px 24px; border-radius: 24px; font-size: 14px; font-weight: 600; }
-    footer { text-align: center; color: #999; font-size: 12px; padding-bottom: 40px; }
+    header p { font-size: 14px; opacity: 0.85; }
+    main { max-width: 720px; margin: 24px auto; padding: 0 16px 60px; }
+    .card { background: white; border-radius: 16px; padding: 20px; margin-bottom: 14px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+    .card h2 { font-size: 16px; font-weight: 700; color: #2e7d32; margin-bottom: 16px; }
+    .faq-item { margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid #f0f0f0; }
+    .faq-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .faq-item h3 { font-size: 14px; font-weight: 700; color: #1d1d1f; margin-bottom: 8px; }
+    .bilingual { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .bilingual .en { border-right: 1px solid #e8f5e9; padding-right: 10px; }
+    .lang-tag { font-size: 10px; font-weight: 700; color: #2e7d32; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; opacity: 0.7; }
+    p.text { font-size: 13px; color: #555; line-height: 1.6; }
+    .contact-box { background: #e8f5e9; border-radius: 12px; padding: 16px; text-align: center; margin-top: 8px; }
+    .contact-box p { color: #555; font-size: 13px; margin-bottom: 6px; }
+    .contact-box .email { font-size: 15px; font-weight: 600; color: #2e7d32; margin: 8px 0 12px; word-break: break-all; }
+    .contact-box a { display: inline-block; background: #2e7d32; color: white; text-decoration: none; padding: 9px 22px; border-radius: 22px; font-size: 13px; font-weight: 600; }
+    footer { text-align: center; color: #999; font-size: 11px; padding-bottom: 40px; }
+    @media (max-width: 480px) {
+      .bilingual { grid-template-columns: 1fr; gap: 8px; }
+      .bilingual .en { border-right: none; border-bottom: 1px solid #e8f5e9; padding-right: 0; padding-bottom: 8px; }
+    }
   </style>
 </head>
 <body>
@@ -34,81 +41,101 @@
 
 <main>
 
-  <!-- ═══ ENGLISH ═══ -->
-  <div class="lang-divider">🇺🇸 English</div>
+  <div class="card">
+    <h2>FAQ · 常见问题</h2>
+
+    <div class="faq-item">
+      <h3>GPS inaccurate / Distance not updating · GPS 定位不准 / 距离不更新</h3>
+      <div class="bilingual">
+        <div class="en">
+          <div class="lang-tag">EN</div>
+          <p class="text">Make sure location permission is "While Using the App". GPS is less accurate indoors — use in an open outdoor area.</p>
+        </div>
+        <div class="zh">
+          <div class="lang-tag">中文</div>
+          <p class="text">请确保已授权「使用期间允许」定位权限。室内 GPS 精度较低，建议在室外空旷地带使用。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>No voice announcements · 语音播报没有声音</h3>
+      <div class="bilingual">
+        <div class="en">
+          <div class="lang-tag">EN</div>
+          <p class="text">Check the side silent switch is off and system volume is up. Confirm Bluetooth headphones are connected.</p>
+        </div>
+        <div class="zh">
+          <div class="lang-tag">中文</div>
+          <p class="text">请检查侧边静音开关是否关闭，并调高系统音量。使用蓝牙耳机时请确认已连接。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Training plan failed · 训练计划生成失败</h3>
+      <div class="bilingual">
+        <div class="en">
+          <div class="lang-tag">EN</div>
+          <p class="text">Plans require internet. Check your network and retry. Free: 1 plan/month. Pro: unlimited.</p>
+        </div>
+        <div class="zh">
+          <div class="lang-tag">中文</div>
+          <p class="text">训练计划由 AI 生成，需要网络连接。请检查网络后重试。免费用户每月 1 次，Pro 无限制。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>How to cancel subscription · 如何取消订阅</h3>
+      <div class="bilingual">
+        <div class="en">
+          <div class="lang-tag">EN</div>
+          <p class="text">iPhone Settings → Your Name → Subscriptions → "AI Running Coach" → Cancel Subscription.</p>
+        </div>
+        <div class="zh">
+          <div class="lang-tag">中文</div>
+          <p class="text">iPhone「设置」→「你的姓名」→「订阅」→ 找到「AI跑步教练」→「取消订阅」。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Pro not unlocked after purchase · 购买后无法解锁 Pro</h3>
+      <div class="bilingual">
+        <div class="en">
+          <div class="lang-tag">EN</div>
+          <p class="text">Tap "Restore Purchase" on the Profile page to restore your Pro benefits.</p>
+        </div>
+        <div class="zh">
+          <div class="lang-tag">中文</div>
+          <p class="text">在 App 内「我的」页面点击「恢复购买」按钮即可恢复 Pro 权益。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <h3>Records missing · 成就和跑步记录丢失</h3>
+      <div class="bilingual">
+        <div class="en">
+          <div class="lang-tag">EN</div>
+          <p class="text">Data is on your local device — do not uninstall. If lost, contact us for help.</p>
+        </div>
+        <div class="zh">
+          <div class="lang-tag">中文</div>
+          <p class="text">数据存储在本地设备，请勿卸载 App。若已丢失，请联系我们协助恢复。</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <div class="card">
-    <h2>FAQ</h2>
-    <div class="faq-item">
-      <h3>GPS inaccurate / Distance not updating</h3>
-      <p>Make sure location permission is set to "While Using the App". GPS accuracy is low indoors — use the app in an open outdoor area for best results.</p>
-    </div>
-    <div class="faq-item">
-      <h3>No voice announcements</h3>
-      <p>Check that the side silent switch is off and the system volume is turned up. If using Bluetooth headphones, confirm they are connected.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Training plan generation failed</h3>
-      <p>Training plans are AI-generated and require an internet connection. Check your network and try again. Free users can generate 1 plan per month; Pro users have unlimited plans.</p>
-    </div>
-    <div class="faq-item">
-      <h3>How to cancel subscription</h3>
-      <p>Go to iPhone Settings → Your Name → Subscriptions → find "AI Running Coach" → Cancel Subscription.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Pro features not unlocked after purchase</h3>
-      <p>Tap "Restore Purchase" on the Profile page inside the App to restore your Pro benefits.</p>
-    </div>
-    <div class="faq-item">
-      <h3>Achievements or run records missing</h3>
-      <p>Data is stored on your local device — do not uninstall the App. If data is lost, contact us and we will do our best to help.</p>
-    </div>
-  </div>
-  <div class="card">
-    <h2>Contact Us</h2>
+    <h2>Contact Us · 联系我们</h2>
     <div class="contact-box">
-      <p>If the above didn't resolve your issue, feel free to email us. We respond within 1–2 business days.</p>
+      <p>Still need help? / 还有问题？</p>
       <p class="email">1614103587@qq.com</p>
-      <a href="mailto:1614103587@qq.com">Send Email</a>
-    </div>
-  </div>
-
-  <!-- ═══ 中文 ═══ -->
-  <div class="lang-divider">🇨🇳 中文</div>
-
-  <div class="card">
-    <h2>常见问题</h2>
-    <div class="faq-item">
-      <h3>GPS 定位不准 / 距离不更新</h3>
-      <p>请确保已授权「使用期间允许」定位权限。室内测试时 GPS 精度较低，建议在室外空旷地带使用。</p>
-    </div>
-    <div class="faq-item">
-      <h3>语音播报没有声音</h3>
-      <p>请检查手机侧边静音开关是否关闭，并调高系统音量。使用蓝牙耳机时请确认已连接。</p>
-    </div>
-    <div class="faq-item">
-      <h3>训练计划生成失败</h3>
-      <p>训练计划由 AI 生成，需要网络连接。请检查网络后重试。免费用户每月可生成 1 次，Pro 用户无限制。</p>
-    </div>
-    <div class="faq-item">
-      <h3>如何取消订阅</h3>
-      <p>前往 iPhone「设置」→「你的姓名」→「订阅」→ 找到「AI跑步教练」→「取消订阅」。</p>
-    </div>
-    <div class="faq-item">
-      <h3>购买后无法解锁 Pro 功能</h3>
-      <p>请在 App 内「我的」页面点击「恢复购买」按钮，即可恢复已购买的 Pro 权益。</p>
-    </div>
-    <div class="faq-item">
-      <h3>成就和跑步记录丢失</h3>
-      <p>数据存储在本地设备，请勿卸载 App。若已丢失，请联系我们说明情况，我们将尽力协助恢复。</p>
-    </div>
-  </div>
-  <div class="card">
-    <h2>联系我们</h2>
-    <div class="contact-box">
-      <p>如以上内容未能解决你的问题，欢迎发送邮件，我们将在 1-2 个工作日内回复。</p>
-      <p class="email">1614103587@qq.com</p>
-      <a href="mailto:1614103587@qq.com">发送邮件</a>
+      <a href="mailto:1614103587@qq.com">Send Email · 发送邮件</a>
     </div>
   </div>
 
