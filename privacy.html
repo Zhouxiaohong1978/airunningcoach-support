@@ -25,7 +25,8 @@
     .contact-box p { margin-bottom: 10px; }
     .contact-box a { display: inline-block; background: #2e7d32; color: white; text-decoration: none; padding: 12px 28px; border-radius: 24px; font-size: 15px; font-weight: 600; }
     footer { text-align: center; color: #999; font-size: 13px; padding-bottom: 40px; }
-    .lang-cn, .lang-en { display: none; }
+    .lang-cn { display: block; }
+    .lang-en { display: none; }
   </style>
 </head>
 <body>
@@ -165,8 +166,8 @@
 
 <script>
   function setLang(lang) {
-    document.querySelectorAll('.lang-cn, .lang-en').forEach(el => el.style.display = 'none');
-    document.querySelectorAll('header p').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.lang-cn').forEach(el => el.style.display = 'none');
+    document.querySelectorAll('.lang-en').forEach(el => el.style.display = 'none');
     document.getElementById('btn-cn').classList.remove('active');
     document.getElementById('btn-en').classList.remove('active');
     document.querySelectorAll('.lang-' + lang).forEach(el => el.style.display = 'block');
@@ -174,7 +175,7 @@
   }
   // Auto-detect browser language
   const userLang = navigator.language || navigator.userLanguage;
-  setLang(userLang.startsWith('zh') ? 'cn' : 'en');
+  if (!userLang.startsWith('zh')) { setLang('en'); } else { document.getElementById('btn-cn').classList.add('active'); }
 </script>
 
 </body>
